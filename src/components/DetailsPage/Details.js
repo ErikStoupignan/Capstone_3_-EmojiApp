@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Details = () => (
-  <div>This is Details Page!</div>
+  <div>
+    <h1>Details page!</h1>
+  </div>
 );
 
 export default Details;
