@@ -1,6 +1,49 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# EmojiApp
+
+## Built With
+
+- CSS
+- JS
+- React
+- Redux
+
+## Live Demo
+
+<a href="#">Not available at the moment</a> 
+
+## Getting Started
+
+To get a local copy up and running it, follow these simple steps.
+
+### Prerequisites
+
+- Internet Service.
+- Basic Knowledge about Git and Github.
+- VSCode.
+
+### Setup
+
+1. Create an empty folder in your computer to store the clone.
+
+2. Copy the following link and paste it into your VSCode or your terminal:
+
+> https://github.com/ErikStoupignan/Capstone_3_-EmojiApp.git
+
+3. Store it in the file you created before.
+
+4. Create a new branch for working and make changes to adapt it according to your requirements.
+
+### Install
+
+- To install linters please open the ***.github/workflows*** then get into ***linters.yml*** and check the instructions and commands.
+- To install the libraries, please use the cmd: 
+> npm install
+
+### Usage
+
+For educational purpose only, use it as a guideline.
 
 ## Available Scripts
 
@@ -39,28 +82,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
@@ -68,3 +89,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Authors
+
+👤 **Erik Stoupignan Sánchez Beltrán**
+
+- GitHub: [@ErikStoupignan](https://github.com/ErikStoupignan)
+- Twitter: [@Erik_Stoupignan](https://twitter.com/Erik_Stoupignan)
+- LinkedIn: [Erik Stoupignan Sánchez Beltrán](https://www.linkedin.com/in/erik-sanchez-beltran/)
+
+## License
+<a href="MIT.md">License MIT.md</a>
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
