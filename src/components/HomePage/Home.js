@@ -1,42 +1,68 @@
-/* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import Parser from 'html-react-parser';
 import { getEmojis } from '../../redux/reduxHome/ApiEmojis';
 import './home.css';
-
-// Función con props, para mostrar en el escritorio la información final
+import Details from '../DetailsPage/Details';
 
 const EmojiList = (props) => {
   const { data } = props;
 
   return (
-    <tbody>
-      <tr>
+    <tr id={data.name} onClick={() => Details(data)} className="One-Item">
 
-        <td>{data.name}</td>
-        <td>{data.category}</td>
-        <td>{data.group}</td>
-        <td>{data.htmlCode}</td>
-        <td>{data.unicode}</td>
+      {/* Column fot all the information */}
+      <td id={data.name} className="Info">
+        <p>
+          <span>Name: </span>
+          {data.name}
+        </p>
 
-      </tr>
-    </tbody>
+        <p>
+          <span>Category: </span>
+          {data.category}
+        </p>
+
+        <p>
+          <span>Group: </span>
+          {data.group}
+        </p>
+      </td>
+
+      {/* Columns for the Codes */}
+      <td id={data.name} className="Codes">
+        <p>
+          Unicode:
+          {' '}
+          {data.unicode}
+        </p>
+        <p>
+          HTMLCode:
+          {' '}
+          {data.htmlCode}
+        </p>
+      </td>
+
+      {/* Place for the emoji */}
+      <td id={data.name} className="Emoji-icon">
+        {Parser(data.htmlCode[0])}
+      </td>
+
+    </tr>
   );
 };
 
-// Proptypes for the EmojiList function
 EmojiList.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string,
     category: PropTypes.string,
     group: PropTypes.string,
-    htmlCode: PropTypes.string,
-    unicode: PropTypes.string,
+    htmlCode: PropTypes.node,
+    unicode: PropTypes.node,
   }).isRequired,
 };
 
-// Baja la información del API y la envía a la función de arriba
 const GetInformation = () => {
   const dispatch = useDispatch();
   const emojisData = useSelector((store) => store.emojis);
@@ -52,18 +78,18 @@ const GetInformation = () => {
       <thead>
 
         <tr className="heads-table">
-          <th> Name </th>
-          <th> Category </th>
-          <th> Group </th>
-          <th> htmlCode </th>
-          <th> uniCode </th>
+          <th> Info </th>
+          <th> Codes </th>
+          <th> Emoji </th>
         </tr>
 
       </thead>
 
-      {emojisData.map((data) => (
-        <EmojiList key={data.htmlCode} data={data} />
-      ))}
+      <tbody className="table-body">
+        {emojisData.map((data) => (
+          <EmojiList key={data.htmlCode[0]} data={data} id={data.name} />
+        ))}
+      </tbody>
 
     </table>
   );

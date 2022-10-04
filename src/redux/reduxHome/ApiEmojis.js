@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const apiURL = 'https://emojihub.herokuapp.com/api/all';
+const apiURL = 'https://emojihub.herokuapp.com/api/all/group_plant_flower';
 
 // Download the information from the API
 const getEmojis = createAsyncThunk('users/getEmojis', async () => {
