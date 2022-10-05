@@ -1,36 +1,12 @@
+/* eslint-disable arrow-body-style */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import Parser from 'html-react-parser';
 import { Link } from 'react-router-dom';
 import { getEmojis } from '../../redux/reduxHome/ApiEmojis';
 import './home.css';
 import Nav from '../navbar/nav';
-
-const EmojiList = (props) => {
-  const { data } = props;
-
-  return (
-    <>
-      <div id={data.name} className="Emoji-icon-grid">
-        <div className="order-grid Emoji-home">
-          {Parser(data.htmlCode[0])}
-        </div>
-        <div className="order-grid EmojiName-home">{data.name}</div>
-      </div>
-    </>
-  );
-};
-
-EmojiList.propTypes = {
-  data: PropTypes.shape({
-    name: PropTypes.string,
-    category: PropTypes.string,
-    group: PropTypes.string,
-    htmlCode: PropTypes.node,
-    unicode: PropTypes.node,
-  }).isRequired,
-};
+import Headershow from './Header';
+import EmojiList from './EmojiList';
 
 const GetInformation = () => {
   const dispatch = useDispatch();
@@ -51,8 +27,8 @@ const GetInformation = () => {
   };
 
   return (
-    <section>
-      <Nav name="Emojis App" />
+    <section className="Container-Home">
+      <Nav name="Emoji App" />
 
       <select onChange={handlefilter} name="select" className="menu-filter">
         <option defaultValue="/all/" value="/all/">&#127988; All Emojis &#127988;</option>
@@ -64,6 +40,8 @@ const GetInformation = () => {
         <option value="/all/category_objects">&#128218; Objects</option>
         <option value="/all/category_symbols">&#128696; Symbols</option>
       </select>
+
+      <Headershow data={emojisData} />
 
       <ul className="Ul-Emojis-Container">
 
