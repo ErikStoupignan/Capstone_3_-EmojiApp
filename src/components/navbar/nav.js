@@ -1,18 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './nav.css';
+import PropTypes from 'prop-types';
 
-const Nav = () => (
+const Nav = (props) => {
+  const { name, arrow } = props;
 
-  <nav>
-    <h1>This is the NavBar</h1>
+  return (
+    <nav className="Nav-bar">
+      {/* <FontAwesomeIcon icon="fa-solid fa-house" /> */}
+      <h1>{name}</h1>
 
-    <>
-      <NavLink to="/HomePage">Home</NavLink>
-      <NavLink to="/DetailsPage">Details</NavLink>
-    </>
+      <>
+        <NavLink to="/HomePage">
+          {arrow}
+        </NavLink>
+      </>
 
-  </nav>
+    </nav>
+  );
+};
 
-);
+Nav.propTypes = {
+  name: PropTypes.string,
+  arrow: PropTypes.string,
+}.isRequired;
 
 export default Nav;

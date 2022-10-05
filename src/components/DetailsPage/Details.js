@@ -1,22 +1,22 @@
-import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
+import Nav from '../navbar/nav';
 
-const Details = (props) => {
-  const { data } = props;
+const Details = () => {
+  const location = useLocation();
+  const { state } = location;
 
   return (
-    <>
-      <h1>{data.name}</h1>
-      <h2>{data.category}</h2>
-      <h3>{data.group}</h3>
-      <h4>{data.htmlCode[0]}</h4>
-    </>
+    <section>
+      <Nav name="Details Page" arrow="&#60; Home" />
+
+      <h1>{state.state.name}</h1>
+      <h2>{state.state.category}</h2>
+      <h3>{state.state.group}</h3>
+      <h4>{state.state.htmlCode[0]}</h4>
+      <h5>{state.state.unicode}</h5>
+
+    </section>
   );
 };
-
-Details.propTypes = {
-  data: PropTypes.shape({
-    id: PropTypes.string,
-  }),
-}.isRequired;
 
 export default Details;

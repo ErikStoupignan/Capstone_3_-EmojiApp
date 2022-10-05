@@ -1,26 +1,81 @@
-thead {
-  background: rgba(30, 0, 255, 0.072);
-}
-
-td {
-  border: 1px solid rgba(0, 0, 0, 0.284);
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
 }
 
-table {
-  border: transparent 5px solid;
+:root {
+  --square-dimensions: 100px;
 }
 
-.One-Item:hover {
-  background: rgba(54, 78, 231, 0.332);
+/* Selection options menu */
+.menu-filter {
+  border: 2px solid rgb(96, 253, 11);
 }
 
-.Codes {
-  width: 50vw;
+.Ul-Emojis-Container {
+  margin:20px;
+  border: 1px solid rgb(238, 219, 11);
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.Emoji-icon {
-  font-size: 50px;
-  padding: 30px;
+.Li-OneItem-emoji {
+  list-style: none;
+  width: var(--square-dimensions);
+  height: var(--square-dimensions);
+  margin: 10px auto;
+  align-items: center;
+}
+
+.Link-on-the-emojis {
+  text-decoration: none;
+  color: none;
+}
+
+/* Grid of the emojis */
+.Emoji-icon-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid red;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  justify-content: center;
+  align-self: center;
+}
+
+.order-grid {
+  grid-area: 1/2;
+  text-align: center;
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
+}
+
+.Emoji-home {
+  font-size:70px;
+  width: 100%;
+  height: 100%;
+}
+
+.EmojiName-home {
+  border: 1px solid #000;
+  width: var(--square-dimensions);
+  height: var(--square-dimensions);
+  max-width: var(--square-dimensions);
+  max-height: var(--square-dimensions);
+  overflow-y: hidden;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.EmojiName-home:hover {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.505);
+  color: white;
+  text-shadow: 0 0 2px 2px black;
 }

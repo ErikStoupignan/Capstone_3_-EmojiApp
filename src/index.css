@@ -1,19 +1,13 @@
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
+  font-family: 'Gill Sans',
+   'Gill Sans MT',
+    Calibri, 
+    'Trebuchet MS', 
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  /* background: #EC4C8A; */
+  background: #4369B2;
 }
 
 code {

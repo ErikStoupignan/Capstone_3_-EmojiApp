@@ -2,54 +2,23 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Parser from 'html-react-parser';
+import { Link } from 'react-router-dom';
 import { getEmojis } from '../../redux/reduxHome/ApiEmojis';
 import './home.css';
-import Details from '../DetailsPage/Details';
+import Nav from '../navbar/nav';
 
 const EmojiList = (props) => {
   const { data } = props;
 
   return (
-    <tr id={data.name} onClick={() => Details(data)} className="One-Item">
-
-      {/* Column fot all the information */}
-      <td id={data.name} className="Info">
-        <p>
-          <span>Name: </span>
-          {data.name}
-        </p>
-
-        <p>
-          <span>Category: </span>
-          {data.category}
-        </p>
-
-        <p>
-          <span>Group: </span>
-          {data.group}
-        </p>
-      </td>
-
-      {/* Columns for the Codes */}
-      <td id={data.name} className="Codes">
-        <p>
-          Unicode:
-          {' '}
-          {data.unicode}
-        </p>
-        <p>
-          HTMLCode:
-          {' '}
-          {data.htmlCode}
-        </p>
-      </td>
-
-      {/* Place for the emoji */}
-      <td id={data.name} className="Emoji-icon">
-        {Parser(data.htmlCode[0])}
-      </td>
-
-    </tr>
+    <>
+      <div id={data.name} className="Emoji-icon-grid">
+        <div className="order-grid Emoji-home">
+          {Parser(data.htmlCode[0])}
+        </div>
+        <div className="order-grid EmojiName-home">{data.name}</div>
+      </div>
+    </>
   );
 };
 
@@ -73,25 +42,46 @@ const GetInformation = () => {
     }
   });
 
+  const handlefilter = (e) => {
+    dispatch(getEmojis(e.target.value));
+  };
+
+  const handleRandomButton = () => {
+    dispatch(getEmojis('/random'));
+  };
+
   return (
-    <table>
-      <thead>
+    <section>
+      <Nav name="Emojis App" />
 
-        <tr className="heads-table">
-          <th> Info </th>
-          <th> Codes </th>
-          <th> Emoji </th>
-        </tr>
+      <select onChange={handlefilter} name="select" className="menu-filter">
+        <option defaultValue="/all/" value="/all/">&#127988; All Emojis &#127988;</option>
+        <option value="/all/category_smileys_and_people">&#128526; Smileys & People</option>
+        <option value="/all/category_animals_and_nature">&#128024; Animals & Nature</option>
+        <option value="/all/category_food_and_drink">&#127829; Food & Drink</option>
+        <option value="/all/category_travel_and_places">&#128747; Travel & Places</option>
+        <option value="/all/category_activities">&#127923; Activities</option>
+        <option value="/all/category_objects">&#128218; Objects</option>
+        <option value="/all/category_symbols">&#128696; Symbols</option>
+      </select>
 
-      </thead>
+      <ul className="Ul-Emojis-Container">
 
-      <tbody className="table-body">
         {emojisData.map((data) => (
-          <EmojiList key={data.htmlCode[0]} data={data} id={data.name} />
-        ))}
-      </tbody>
+          <li key={data.unicode} className="Li-OneItem-emoji">
 
-    </table>
+            <Link to="/DetailsPage" className="Link-on-the-emojis" state={{ state: data }}>
+              <EmojiList data={data} id={data.name} />
+            </Link>
+
+          </li>
+        ))}
+
+      </ul>
+
+      <button type="button" onClick={handleRandomButton}>Click for a Random Emoji</button>
+
+    </section>
   );
 };
 
