@@ -1,22 +1,26 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './nav.css';
 import PropTypes from 'prop-types';
 
 const Nav = (props) => {
-  const { name, arrow } = props;
+  const {
+    name,
+    arrow = '2022',
+    micro,
+    nut,
+  } = props;
 
   return (
     <nav className="Nav-bar">
-      <span className="NavBarDate">2022</span>
+      <NavLink className="NavBarDate-Arrow" to="/HomePage">{arrow}</NavLink>
 
-      <Link className="NavBarTitle" href="https://github.com/ErikStoupignan" target="_blank">{name}</Link>
+      <a className="NavBarTitle" href="https://github.com/ErikStoupignan" target="_blank" rel="noreferrer">{name}</a>
 
-      <>
-        <NavLink to="/HomePage">
-          {arrow}
-        </NavLink>
-      </>
+      <div className="Navbar-IconsContainer">
+        <span className="Navbar-icon"><a href="https://www.linkedin.com/in/erik-sanchez-beltran/" target="_blank" rel="noreferrer">{micro}</a></span>
+        <span className="Navbar-icon"><a href="https://github.com/ErikStoupignan/Capstone_3_-EmojiApp" target="_blank" rel="noreferrer">{nut}</a></span>
+      </div>
 
     </nav>
   );

@@ -14,17 +14,51 @@
   height: 99vh;
 }
 
-/* Selection options menu */
-.menu-filter {
+.content-select {
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 15px;
-  right: 15px;
-  width: 20px;
+  right: 20px;
+  background: var(--backgroud-light-template);
   border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 0 3px 0 0;
 }
 
-.menu-filter:hover {
-  border: 2px solid rgb(96, 253, 11);
+.content-select select {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 3px 10px;
+  color: #fcfcfc;
+  background: #436ab21e;
+  font-size: 1em;
+  border-radius: 50%;
+  position: relative;
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+.content-select i {
+  position: absolute;
+  right: 40px;
+  top: calc(50% - 15px);
+  width: 16px;
+  height: 16px;
+
+  /* display: block; */
+  display: none;
+  font-size: 40px;
+  transition: all 0.25s ease;
+  color: white;
+  cursor: none;
+  z-index: 0;
+}
+
+.content-select select:hover {
+  background: var(--backgroud-light-template);
 }
 
 /* Headers Section */
@@ -50,10 +84,11 @@
   flex-direction: column;
   justify-content: center;
   padding-left: 10px;
+  padding-right: 5px;
 }
 
 .Header-Categ {
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   font-weight: bold;
 }
@@ -145,6 +180,22 @@
   border-radius: 30px;
 }
 
+.LoadingMessage {
+  border: 1px solid #000;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  font-size: 50px;
+  top: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.745);
+}
+
 @media (min-width: 762px) {
   :root {
     --square-dimensions: 120px;
@@ -195,5 +246,66 @@
   .HeaderRightContainer {
     width: 100%;
     text-align: center;
+  }
+
+  .LoadingMessage {
+    height: 100%;
+  }
+
+  /* Select Menu */
+  .content-input input,
+  .content-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .content-select select::-ms-expand {
+    display: none;
+  }
+
+  .content-select {
+    width: 210px;
+    height: 40px;
+    position: absolute;
+    top: 4px;
+    right: 20px;
+    background: var(--backgroud-light-template);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+  }
+
+  .content-select select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 3px 10px;
+    height: 100%;
+    color: #fcfcfc;
+    background: #436ab21e;
+    font-size: 1em;
+    border-radius: 12px;
+    position: relative;
+    transition: all 1s ease;
+    z-index: 1;
+  }
+
+  .content-select i {
+    position: absolute;
+    right: 40px;
+    top: calc(50% - 15px);
+    width: 16px;
+    height: 16px;
+    display: block;
+    font-size: 40px;
+    transition: all 0.25s ease;
+    color: white;
+    cursor: none;
+    z-index: 0;
+  }
+
+  .content-select select:hover {
+    background: var(--backgroud-light-template);
   }
 }

@@ -22,24 +22,23 @@ const GetInformation = () => {
     dispatch(getEmojis(e.target.value));
   };
 
-  const handleRandomButton = () => {
-    dispatch(getEmojis('/random'));
-  };
-
   return (
     <section className="Container-Home">
       <Nav name="Emoji App" />
 
-      <select onChange={handlefilter} name="select" className="menu-filter">
-        <option defaultValue="/all/" value="/all/">&#127988; All Emojis &#127988;</option>
-        <option value="/all/category_smileys_and_people">&#128526; Smileys & People</option>
-        <option value="/all/category_animals_and_nature">&#128024; Animals & Nature</option>
-        <option value="/all/category_food_and_drink">&#127829; Food & Drink</option>
-        <option value="/all/category_travel_and_places">&#128747; Travel & Places</option>
-        <option value="/all/category_activities">&#127923; Activities</option>
-        <option value="/all/category_objects">&#128218; Objects</option>
-        <option value="/all/category_symbols">&#128696; Symbols</option>
-      </select>
+      <div className="content-select">
+        <select onChange={handlefilter} name="select" className="menu-filter">
+          <option defaultValue="/all/" value="/all/">&#128681; All Emojis &#128681;</option>
+          <option value="/all/category_smileys_and_people">&#128526; Smileys & People</option>
+          <option value="/all/category_animals_and_nature">&#128024; Animals & Nature</option>
+          <option value="/all/category_food_and_drink">&#127829; Food & Drink</option>
+          <option value="/all/category_travel_and_places">&#128747; Travel & Places</option>
+          <option value="/all/category_activities">&#127923; Activities</option>
+          <option value="/all/category_objects">&#128218; Objects</option>
+          <option value="/all/category_symbols">&#128696; Symbols</option>
+        </select>
+        <i>&#10549;</i>
+      </div>
 
       <div className="mediaQuery">
         <Headershow data={emojisData} />
@@ -58,8 +57,6 @@ const GetInformation = () => {
 
         </ul>
       </div>
-
-      <button type="button" onClick={handleRandomButton}>Click for a Random Emoji</button>
 
     </section>
   );

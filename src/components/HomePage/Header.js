@@ -13,7 +13,7 @@ const Headershow = (props) => {
 
           <div className="HeaderRightContainer">
             <div className="Header-Categ">
-              {data[0].category}
+              {data[0].category.toUpperCase()}
             </div>
             <div className="NumberEmojis">
               {data.length}
@@ -30,7 +30,10 @@ const Headershow = (props) => {
   }
 
   return (
-    <div>LOADING...</div>
+    <div className="LoadingMessage">
+      <p>LOADING...</p>
+      <p className="App-logo">&#129336;</p>
+    </div>
   );
 };
 
