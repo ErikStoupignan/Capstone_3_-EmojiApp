@@ -1,4 +1,3 @@
-/* eslint-disable arrow-body-style */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -25,7 +24,6 @@ const GetInformation = () => {
   return (
     <section className="Container-Home">
       <Nav name="Emoji App" />
-
       <div className="content-select">
         <select onChange={handlefilter} name="select" className="menu-filter">
           <option defaultValue="/all/" value="/all/">&#128681; All Emojis &#128681;</option>
@@ -39,25 +37,18 @@ const GetInformation = () => {
         </select>
         <i>&#10549;</i>
       </div>
-
       <div className="mediaQuery">
         <Headershow data={emojisData} />
-
         <ul className="Ul-Emojis-Container">
-
           {emojisData.map((data) => (
             <li key={data.unicode} className="Li-OneItem-emoji">
-
               <Link to="/DetailsPage" className="Link-on-the-emojis" state={{ state: data }}>
                 <EmojiList data={data} id={data.name} />
               </Link>
-
             </li>
           ))}
-
         </ul>
       </div>
-
     </section>
   );
 };
