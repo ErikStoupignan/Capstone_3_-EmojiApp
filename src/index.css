@@ -6,19 +6,5 @@ body {
     Calibri,
     'Trebuchet MS',
     sans-serif;
-
-  /* background: #EC4C8A; */
-
-  /* Dark blue background: #385894 */
   background: #4369b2;
-}
-
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
 }
