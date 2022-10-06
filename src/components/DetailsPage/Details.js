@@ -7,6 +7,12 @@ const Details = () => {
   const location = useLocation();
   const { state } = location;
 
+  if (state === null) {
+    return (
+      <div>Ups... something was wrong</div>
+    );
+  }
+
   return (
     <section className="MainContainer-Details">
       <Nav name="Details Page" arrow="&#60;" micro="&#127897;" nut="&#9881;" />
