@@ -1,18 +1,34 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './nav.css';
+import PropTypes from 'prop-types';
 
-const Nav = () => (
+const Nav = (props) => {
+  const {
+    name,
+    arrow = '2022',
+    micro,
+    nut,
+  } = props;
 
-  <nav>
-    <h1>This is the NavBar</h1>
+  return (
+    <nav className="Nav-bar">
+      <NavLink className="NavBarDate-Arrow" to="/HomePage">{arrow}</NavLink>
 
-    <>
-      <NavLink to="/HomePage">Home home</NavLink>
-      <NavLink to="/DetailsPage">Details Page</NavLink>
-    </>
+      <a className="NavBarTitle" href="https://github.com/ErikStoupignan" target="_blank" rel="noreferrer">{name}</a>
 
-  </nav>
+      <div className="Navbar-IconsContainer">
+        <span className="Navbar-icon"><a href="https://www.linkedin.com/in/erik-sanchez-beltran/" target="_blank" rel="noreferrer">{micro}</a></span>
+        <span className="Navbar-icon"><a href="https://github.com/ErikStoupignan/Capstone_3_-EmojiApp" target="_blank" rel="noreferrer">{nut}</a></span>
+      </div>
 
-);
+    </nav>
+  );
+};
+
+Nav.propTypes = {
+  name: PropTypes.string,
+  arrow: PropTypes.string,
+}.isRequired;
 
 export default Nav;
