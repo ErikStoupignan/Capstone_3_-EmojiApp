@@ -8,6 +8,7 @@ const Headershow = (props) => {
     return (
       <>
         <section className="HeaderShow">
+
           <div className="Header-Icon">{Parser(data[14].htmlCode[0])}</div>
 
           <div className="HeaderRightContainer">
@@ -22,6 +23,7 @@ const Headershow = (props) => {
           </div>
 
         </section>
+
         <div className="SignalListOfEmojis">EMOJIS LIST</div>
       </>
     );

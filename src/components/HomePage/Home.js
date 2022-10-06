@@ -41,21 +41,23 @@ const GetInformation = () => {
         <option value="/all/category_symbols">&#128696; Symbols</option>
       </select>
 
-      <Headershow data={emojisData} />
+      <div className="mediaQuery">
+        <Headershow data={emojisData} />
 
-      <ul className="Ul-Emojis-Container">
+        <ul className="Ul-Emojis-Container">
 
-        {emojisData.map((data) => (
-          <li key={data.unicode} className="Li-OneItem-emoji">
+          {emojisData.map((data) => (
+            <li key={data.unicode} className="Li-OneItem-emoji">
 
-            <Link to="/DetailsPage" className="Link-on-the-emojis" state={{ state: data }}>
-              <EmojiList data={data} id={data.name} />
-            </Link>
+              <Link to="/DetailsPage" className="Link-on-the-emojis" state={{ state: data }}>
+                <EmojiList data={data} id={data.name} />
+              </Link>
 
-          </li>
-        ))}
+            </li>
+          ))}
 
-      </ul>
+        </ul>
+      </div>
 
       <button type="button" onClick={handleRandomButton}>Click for a Random Emoji</button>
 
