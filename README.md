@@ -11,7 +11,11 @@
 
 ## Live Demo
 
-<a href="#">Not available at the moment</a> 
+<a href="https://emojiapp-essb.netlify.app/">Live demo Here!</a> 
+
+## Link to my Presenting Video
+
+<a href="https://drive.google.com/file/d/1cbaJUQVpC_iXnkh-IYWmThlWUQs1qjPz/view?usp=sharing">Go to the video!</a>
 
 ## Getting Started
 
