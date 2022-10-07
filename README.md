@@ -6,12 +6,16 @@
 
 - CSS
 - JS
-- React
-- Redux
+- React / Redux
+- Jest
 
 ## Live Demo
 
-<a href="#">Not available at the moment</a> 
+<a href="https://emojiapp-essb.netlify.app/">Live demo Here!</a> 
+
+## Link to my Presenting Video
+
+<a href="https://drive.google.com/file/d/1cbaJUQVpC_iXnkh-IYWmThlWUQs1qjPz/view?usp=sharing">Go to the video!</a>
 
 ## Getting Started
 
@@ -97,6 +101,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - GitHub: [@ErikStoupignan](https://github.com/ErikStoupignan)
 - Twitter: [@Erik_Stoupignan](https://twitter.com/Erik_Stoupignan)
 - LinkedIn: [Erik Stoupignan Sánchez Beltrán](https://www.linkedin.com/in/erik-sanchez-beltran/)
+
+## Acknowledgments
+
+- To  Nelson Sakwa, since the whole website is based on her template. <br>
+link to the guidelines: https://www.behance.net/sakwadesignstudio?tracking_source=search_users|nelson%20sakwa
 
 ## License
 <a href="MIT.md">License MIT.md</a>

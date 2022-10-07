@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the functions for Home Page Get information function 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="Container-Home"
+      >
+        <nav
+          class="Nav-bar"
+        >
+          <a
+            class="NavBarDate-Arrow"
+            href="/HomePage"
+          >
+            2022
+          </a>
+          <a
+            class="NavBarTitle"
+            href="https://github.com/ErikStoupignan"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Emoji App
+          </a>
+          <div
+            class="Navbar-IconsContainer"
+          >
+            <span
+              class="Navbar-icon"
+            >
+              <a
+                href="https://www.linkedin.com/in/erik-sanchez-beltran/"
+                rel="noreferrer"
+                target="_blank"
+              />
+            </span>
+            <span
+              class="Navbar-icon"
+            >
+              <a
+                href="https://github.com/ErikStoupignan/Capstone_3_-EmojiApp"
+                rel="noreferrer"
+                target="_blank"
+              />
+            </span>
+          </div>
+        </nav>
+        <div
+          class="content-select"
+        >
+          <select
+            class="menu-filter"
+            name="select"
+          >
+            <option
+              value="/all/"
+            >
+              🚩 All Emojis 🚩
+            </option>
+            <option
+              value="/all/category_smileys_and_people"
+            >
+              😎 Smileys & People
+            </option>
+            <option
+              value="/all/category_animals_and_nature"
+            >
+              🐘 Animals & Nature
+            </option>
+            <option
+              value="/all/category_food_and_drink"
+            >
+              🍕 Food & Drink
+            </option>
+            <option
+              value="/all/category_travel_and_places"
+            >
+              🛫 Travel & Places
+            </option>
+            <option
+              value="/all/category_activities"
+            >
+              🎳 Activities
+            </option>
+            <option
+              value="/all/category_objects"
+            >
+              📚 Objects
+            </option>
+            <option
+              value="/all/category_symbols"
+            >
+              🚸 Symbols
+            </option>
+          </select>
+          <i>
+            ⤵
+          </i>
+        </div>
+        <div
+          class="mediaQuery"
+        >
+          <div
+            class="LoadingMessage"
+          >
+            <p>
+              LOADING...
+            </p>
+            <p
+              class="App-logo"
+            >
+              🤸
+            </p>
+          </div>
+          <ul
+            class="Ul-Emojis-Container"
+          />
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="Container-Home"
+    >
+      <nav
+        class="Nav-bar"
+      >
+        <a
+          class="NavBarDate-Arrow"
+          href="/HomePage"
+        >
+          2022
+        </a>
+        <a
+          class="NavBarTitle"
+          href="https://github.com/ErikStoupignan"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Emoji App
+        </a>
+        <div
+          class="Navbar-IconsContainer"
+        >
+          <span
+            class="Navbar-icon"
+          >
+            <a
+              href="https://www.linkedin.com/in/erik-sanchez-beltran/"
+              rel="noreferrer"
+              target="_blank"
+            />
+          </span>
+          <span
+            class="Navbar-icon"
+          >
+            <a
+              href="https://github.com/ErikStoupignan/Capstone_3_-EmojiApp"
+              rel="noreferrer"
+              target="_blank"
+            />
+          </span>
+        </div>
+      </nav>
+      <div
+        class="content-select"
+      >
+        <select
+          class="menu-filter"
+          name="select"
+        >
+          <option
+            value="/all/"
+          >
+            🚩 All Emojis 🚩
+          </option>
+          <option
+            value="/all/category_smileys_and_people"
+          >
+            😎 Smileys & People
+          </option>
+          <option
+            value="/all/category_animals_and_nature"
+          >
+            🐘 Animals & Nature
+          </option>
+          <option
+            value="/all/category_food_and_drink"
+          >
+            🍕 Food & Drink
+          </option>
+          <option
+            value="/all/category_travel_and_places"
+          >
+            🛫 Travel & Places
+          </option>
+          <option
+            value="/all/category_activities"
+          >
+            🎳 Activities
+          </option>
+          <option
+            value="/all/category_objects"
+          >
+            📚 Objects
+          </option>
+          <option
+            value="/all/category_symbols"
+          >
+            🚸 Symbols
+          </option>
+        </select>
+        <i>
+          ⤵
+        </i>
+      </div>
+      <div
+        class="mediaQuery"
+      >
+        <div
+          class="LoadingMessage"
+        >
+          <p>
+            LOADING...
+          </p>
+          <p
+            class="App-logo"
+          >
+            🤸
+          </p>
+        </div>
+        <ul
+          class="Ul-Emojis-Container"
+        />
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
