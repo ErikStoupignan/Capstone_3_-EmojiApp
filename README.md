@@ -2,6 +2,33 @@
 
 # EmojiApp
 
+<div align="center">
+
+  ## Mobil
+  ### Main Page 
+  <img src="https://user-images.githubusercontent.com/106561762/215873344-b2f5955d-58cd-4480-9c38-9fa7fd08835c.jpg" width="50%" height="auto" />
+  
+  ## Loading
+  <img src="https://user-images.githubusercontent.com/106561762/215875540-bfe5400c-761c-4f58-be46-f1756caaf7c6.png" width="auto"  height="500px" />
+  
+  ### Details 
+  <img src="https://user-images.githubusercontent.com/106561762/215876509-f3f104dd-1ce4-440d-9b58-da4183fadb60.png" width="auto"  height="500px" />
+
+
+
+  ## Desktop
+  ### Main Page
+  <img src="https://user-images.githubusercontent.com/106561762/215873832-2c2ddbf2-6448-4892-b915-5dc630e51b1a.png" width="100%"  height="auto" />
+  
+  ### Loading 
+  <img src="https://user-images.githubusercontent.com/106561762/215876293-d861591f-79e5-4cbf-ba13-34c6338b58d7.png" width="100%"  height="auto" />
+
+  ### Details 
+  <img src="https://user-images.githubusercontent.com/106561762/215876159-f0b03002-ca31-4f5a-8173-2839b646b033.png" width="100%"  height="auto" />
+  
+
+</div>
+
 ## Built With
 
 - CSS
